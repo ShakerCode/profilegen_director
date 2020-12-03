@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/profiles.css">
+    <title>ProfileGen</title>
+</head>
+
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="https://profilegen.sites.tjhsst.edu/" class="active">Home</a>
+        <a href="https://profilegen.sites.tjhsst.edu/profile_input">Profiles</a>
+        <a href="https://profilegen.sites.tjhsst.edu/profile_search">Search</a>
+    </div>
+
+    <div class="description">
+        <h1>Search Page!</h1>
+
+        <p title="Ex: 'mick' in 'mickey'">
+            <strong>Magic Search:</strong> Search using a keyword or fragment that matches any category
+        </p>
+        
+        <p title="Ex: 'mickey' in 'mickey mouse'">
+            <strong>Criteria Search:</strong> Search for entries that match all given criteria
+        </p>
+
+        <p>Note: Magic search and citeria search are independent of one another.
+            Use the reset button to clear ALL inputs and results.
+        </p>
+    </div>
+
+    <div class="search">
+        <form>
+            <label for="magicSearchTerm">Magic search:</label>
+            <input id="magicSearchTerm" name="magicSearchTerm" type="text">
+            <button type="button" onclick="magicSearch('magicSearch')">Magic Search!</button>
+            <br><br>
+
+            <p>Criteria Search:</p>
+
+            <label for="fname">First Name:</label>
+            <input id="fname" name="fname" type="text">
+            <br>
+
+            <label for="lname">Last Name:</label>
+            <input id="lname" name="lname" type="text">
+            <br>
+
+            <label for="instrument">Instrument:</label>
+            <input id="instrument" name="instrument" type="text">
+            <br>
+
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="text">
+            <br>
+
+            <button type="button" onclick="clearAll()">Reset</button>
+            <button type="button" onclick="search('search')">Criteria Search!</button>
+        </form>
+    </div>
+
+    {{!--<p id=returnMessage></p>--}}
+    <p id="returnMessage"></p>
+    <ol id="resultsList"></ol>
+
+    <table id="resultsTable">
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Instrument</th>
+        <th>Email</th>
+    </table>
+
+    {{!-- <script type="module" src="js/modules.js"></script> --}}
+    <script type="text/javascript" src="js/profile_search.js"></script>
+    <script type="text/javascript" src="js/profile_magic_search.js"></script>
+
+</body>
+
+</html>

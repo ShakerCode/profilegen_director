@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/profiles.css">
+    <title>ProfileGen</title>
+</head>
+
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="https://profilegen.sites.tjhsst.edu/" class="active">Home</a>
+        <a href="https://profilegen.sites.tjhsst.edu/profile_input">Profiles</a>
+        <a href="https://profilegen.sites.tjhsst.edu/profile_search">Search</a>
+    </div>
+
+    <div class="description">
+        <h1>Profiles Page!</h1>
+        <p>Enter information to be stored in a profile. First name, last name, and instrument
+        can only contain alphabetical characters</p>
+    </div>
+
+    <div class="inputs">
+        <form>
+            <label for="fname">First name:</label>
+            <input id="fname" name="fname" type="text" required>
+            <br>
+
+            <label for="lname">Last name:</label>
+            <input id="lname" name="lname" type="text" required>
+            <br>
+
+            <label for="instrument">Instrument:</label>
+            <input id="instrument" name="instrument" type="text" required>
+            <br>
+
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="text" required>
+            <br>
+
+            <button type="button" onclick="inputclearAll()">Reset</button>
+            <button type="button" onclick="sendProfile('input')">Send!</button>
+        </form>
+    </div>
+
+    <p id="returnMessage"></p>
+
+    <script type="text/javascript" src="js/profile_input.js"></script>
+
+</body>
+
+</html>
